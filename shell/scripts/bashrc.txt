@@ -10,6 +10,7 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+PATH=$PATH:/root/shell
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -20,7 +21,9 @@ export PATH
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vim="/usr/bin/vim"
-alias grep='grep --color=auto -i'
+alias pm='chmod u+x /root/shell/*.sh'
+
+alias code='code --user-data-dir ~/vscode --no-sandbox'
+alias vscode='code'
 
 export PS1='\[\e[31;1m\][\u@\h\[\e[33;1m\] \w]\$ \[\e[m\]'
